@@ -1,10 +1,13 @@
 function setup(){
     createCanvas(640, 480);
+    colorMode(HSB);
 }
 
 function draw(){
-    stroke(0);
-    for(var index=3; index < 10; index++) {
+    const N = 10;
+    for(var index=3; index < N; index++) {
+        var color_value = map(index, 3, N, 0, 360);
+        stroke(color_value, 100, 100);
         regular_polygon(index, 320, 240, 200);
     }
 }
