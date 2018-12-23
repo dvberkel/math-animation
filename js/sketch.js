@@ -4,12 +4,18 @@ function setup(){
 }
 
 function draw(){
+    const x = width/2;
+    const y = height/2;
+    const radius = 200;
+    stroke(0, 0, 0);
+    ellipse(x, y, 2*radius, 2*radius);
     const N = 10;
     for(var index=3; index < N; index++) {
         var color_value = map(index, 3, N, 0, 360);
         stroke(color_value, 100, 100);
         regular_polygon(index, 320, 240, 200);
     }
+
 }
 
 function regular_polygon(n, x, y, r) {
